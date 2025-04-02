@@ -25,13 +25,13 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
         name: "Alice",
         rating: 5,
         comment: "Amazing place, will definitely visit again!",
-        avatar: "/assets/avatars/alice.png"
+        avatar: "/assets/avatars/avatar.png"
       },
       {
         name: "Bob",
         rating: 4,
         comment: "Great location, but the price could be lower.",
-        avatar: "/assets/avatars/bob.png"
+        avatar: "/assets/avatars/avatar.png"
       }
     ]
   },
@@ -58,7 +58,7 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
         name: "Charlie",
         rating: 5,
         comment: "Loved the fireplace and the peaceful surroundings.",
-        avatar: "/assets/avatars/charlie.png"
+        avatar: "/assets/avatars/avatar.png"
       }
     ]
   },
@@ -85,7 +85,7 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
         name: "David",
         rating: 5,
         comment: "Perfect for a quiet getaway.",
-        avatar: "/assets/avatars/david.png"
+        avatar: "/assets/avatars/avatar.png"
       }
     ]
   },
@@ -112,7 +112,7 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
         name: "Emma",
         rating: 4,
         comment: "Beautiful place, but the price is a bit high.",
-        avatar: "/assets/avatars/emma.png"
+        avatar: "/assets/avatars/avatar.png"
       }
     ]
   },
@@ -139,7 +139,7 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
         name: "Frank",
         rating: 5,
         comment: "The perfect getaway for nature lovers.",
-        avatar: "/assets/avatars/frank.png"
+        avatar: "/assets/avatars/avatar.png"
       }
     ]
   },

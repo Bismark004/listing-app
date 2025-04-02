@@ -13,14 +13,19 @@ const PropertyDetail: React.FC<{ property: PropertyProps }> = ({ property}) => {
 
             {/*Image Grid*/}
             <div>
-                <Image src={property.image} alt={property.name} className="col-span-2
-                w-full h-96 object-cover rounded-lg" />
+                <Image 
+                    src={property.image} 
+                    alt={property.name} 
+                    width={600}
+                    height={400}
+                    className="rounded-lg"
+                />
             </div>
 
              {/* Description*/}
             <div>
                 <h2>Description</h2>
-                <p>{property.description}</p>
+                <p>{property.description || "No description available"}</p>
             </div>
 
             {/*Amenities*/}
