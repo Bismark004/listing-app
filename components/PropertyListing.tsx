@@ -1,5 +1,5 @@
 import { PROPERTYLISTINGSAMPLE } from "@/constants";
-import PropertyCard from "@/components/PropertyCard";
+import PropertyCard from "@/components/common/PropertyCard";
 
 const PropertyListing: React.FC = () => {
   return (

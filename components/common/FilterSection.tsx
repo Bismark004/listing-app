@@ -1,5 +1,5 @@
 import React from "react";
-import Pill from "@/components/Pill";
+import Pill from "@/components/common/Pill";
 import Image from "next/image";
 
 const FilterSection: React.FC = () => {

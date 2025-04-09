@@ -1,5 +1,5 @@
-import HeroSection from "@/components/HeroSection";
-import FilterSection from "@/components/FilterSection"; 
+import HeroSection from "@/components/common/HeroSection";
+import FilterSection from "@/components/common/FilterSection"; 
 import PropertyListing from "@/components/PropertyListing";
 
 const Home = () => {

@@ -24,5 +24,5 @@ export default function PropertyPage() {
                 <BookingSection price={property.price} />
             </div>
         </div>
-    );
+    ); 
 }
