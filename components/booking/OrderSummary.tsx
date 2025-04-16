@@ -6,6 +6,7 @@ interface BookingDetails {
     totalNights: number;
     bookingFee: number;
     price: number;
+    imageUrl: string;
 };
   
 
@@ -14,10 +15,12 @@ const OrderSummary: React.FC<{ bookingDetails: BookingDetails }> = ({ bookingDet
       <h2 className="text-xl font-semibold">Review Order Details</h2>
       <div className="flex items-center mt-4">
         <Image 
-          src="https://example.com/property.jpg" 
-          alt="Property" 
+          src={bookingDetails.imageUrl}
+          alt={bookingDetails.propertyName}
           className="w-32 h-32 object-cover rounded-md"
-        />
+          width={128}
+          height={128}
+        /> 
         <div className="ml-4">
           <h3 className="text-lg font-semibold">{bookingDetails.propertyName}</h3>
           <p className="text-sm text-gray-500">4.76 (345 reviews)</p>

@@ -1,17 +1,13 @@
+import {useRouter}  from 'next/router';
 import { useState, useEffect } from 'react';
 
-interface BookingDetails {
-    propertyName: string;
-    startDate: string;
-    totalNights: number;
-    bookingFee: number;
-    price: number;
-}
+
 
 const BookingSection: React.FC<{
     price: number,
-    onReserve: (details: BookingDetails) => void
-}> = ({ price, onReserve }) => {
+    imageUrl: string,
+}> = ({ price, imageUrl, }) => {
+    const Router = useRouter();
     const [checkInDate, setCheckInDate] = useState('');
     const [checkOutDate, setCheckOutDate] = useState('');
     const [nights, setNights] = useState(1);
@@ -36,12 +32,18 @@ const BookingSection: React.FC<{
 
     const handleReserve = () => {
         if (checkInDate && checkOutDate) {
-            onReserve({
-                propertyName: 'Sample Property',
-                totalNights: nights,
-                bookingFee: 50,
-                price: price * nights,
-            });
+            Router.push ({
+                pathname: '/booking',
+                query: {
+                    propertyName: 'PropertyName', 
+                    startDate: checkInDate,
+                    totalNights: nights,
+                    bookingFee: 50,
+                    price: price * nights,
+                    imageUrl: imageUrl,
+                }
+            })
+          
         }
     };
 
@@ -111,7 +113,7 @@ const BookingSection: React.FC<{
                 Reserve
             </button>
 
-            <p className="text-center mt-4 text-gray-500 text-sm">You won't be charged yet</p>
+            <p className="text-center mt-4 text-gray-500 text-sm">You wont be charged yet</p>
         </div>
     );
 };
