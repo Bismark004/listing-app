@@ -5,8 +5,9 @@ import { useState, useEffect } from 'react';
 
 const BookingSection: React.FC<{
     price: number,
-    imageUrl: string,
-}> = ({ price, imageUrl, }) => {
+    propertyName: string
+
+}> = ({ price, propertyName}) => {
     const Router = useRouter();
     const [checkInDate, setCheckInDate] = useState('');
     const [checkOutDate, setCheckOutDate] = useState('');
@@ -32,15 +33,13 @@ const BookingSection: React.FC<{
 
     const handleReserve = () => {
         if (checkInDate && checkOutDate) {
-            Router.push ({
-                pathname: '/booking',
+            Router.push ({ 
+                pathname: `/properties/${propertyName}/booking`,
                 query: {
-                    propertyName: 'PropertyName', 
                     startDate: checkInDate,
                     totalNights: nights,
                     bookingFee: 50,
                     price: price * nights,
-                    imageUrl: imageUrl,
                 }
             })
           
